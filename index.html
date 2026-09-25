@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AAKRITI — Interiors & Architecture</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#0e0e0d; --surface:#141413; --card:#1c1c1b; --card2:#20201f;
+--line:#2b2b29; --beige:#d3c2a1; --beige-dim:#a99a7f;
+--text:#ece7dd; --muted:#a7a097; --muted2:#7d776f;
+--gold:#c9a86a;
+}
+body{background:#4a4a44 url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2000&auto=format&fit=crop') center/cover fixed; font-family:'Manrope',sans-serif; color:var(--text); padding:18px; min-height:100vh}
+body::before{content:'';position:fixed;inset:0;background:rgba(20,20,18,.72);backdrop-filter:blur(18px);z-index:-1}
+.frame{max-width:1120px;margin:0 auto;border:1px solid var(--beige);border-radius:22px;overflow:hidden;background:var(--bg);box-shadow:0 30px 80px rgba(0,0,0,.6)}
+/* HEADER / HERO */
+.hero{position:relative;min-height:560px;background:url('https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2000&auto=format&fit=crop') center 65%/cover;border-radius:18px 18px 0 0;overflow:hidden;display:flex;flex-direction:column}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.55) 0%,rgba(0,0,0,.05) 35%,rgba(0,0,0,.15) 60%,rgba(0,0,0,.72) 100%)}
+.topbar{position:relative;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:16px 20px}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-mark{font-family:'Cormorant Garamond',serif;font-size:30px;color:var(--beige);line-height:1;border-right:1px solid rgba(255,255,255,.25);padding-right:10px}
+.logo b{font-size:13px;letter-spacing:.28em;font-weight:700}
+.logo small{display:block;font-size:7px;letter-spacing:.22em;color:#ddd;font-weight:500}
+.nav{background:rgba(10,10,10,.55);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.12);border-radius:100px;padding:6px 14px;display:flex;gap:16px;font-size:11px}
+.nav a{color:#cfcbc2;text-decoration:none;padding:5px 10px;border-radius:100px}
+.nav a.active,.nav a:hover{background:#fff;color:#111}
+.cta-top{display:flex;align-items:center;gap:8px}
+.pill-white{background:#f3efe7;color:#111;border-radius:100px;padding:7px 8px 7px 14px;font-size:11px;font-weight:700;display:flex;align-items:center;gap:8px;border:0}
+.pill-white i{width:22px;height:22px;background:#111;color:#fff;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:12px}
+.icon-btn{width:28px;height:28px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:rgba(0,0,0,.4);color:#fff;display:grid;place-items:center;font-size:12px}
+.hero-title{position:relative;z-index:2;text-align:center;margin-top:6px}
+.hero-title h1{font-family:'Archivo',sans-serif;font-weight:900;font-size:clamp(72px,13.5vw,152px);letter-spacing:.04em;line-height:.9;color:rgba(236,231,221,.88);text-shadow:0 2px 30px rgba(0,0,0,.4)}
+.hero-title p{letter-spacing:.48em;font-size:11px;color:#e8e2d5;margin-top:6px;padding-left:8px}
+.hero-bottom{position:relative;z-index:2;margin-top:auto;display:grid;grid-template-columns:1fr auto 170px;gap:16px;align-items:end;padding:22px 22px 18px}
+.hero-left h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:19px;line-height:1.2}
+.hero-left p{font-size:10px;color:#c9c3b8;margin-top:6px;max-width:200px;line-height:1.6}
+.since{margin-top:10px;font-size:9px;letter-spacing:.2em;border-top:1px solid rgba(255,255,255,.3);display:inline-block;padding-top:8px;color:#e6ddd0}
+.btn-view{background:#f3efe7;border-radius:100px;padding:6px 6px 6px 18px;display:flex;align-items:center;gap:12px;font-size:12px;font-weight:700;border:0}
+.btn-view span{width:32px;height:32px;background:#111;color:#fff;border-radius:50%;display:grid;place-items:center}
+.stats{display:flex;flex-direction:column;gap:10px}
+.stat{background:rgba(18,18,18,.62);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:10px 12px}
+.stat b{font-size:18px} .stat small{display:block;font-size:9px;color:#c9c3b8;line-height:1.4}
+/* SECTIONS */
+.section{padding:28px 24px;border-top:1px solid var(--line)}
+.eyebrow{font-size:8px;letter-spacing:.32em;color:var(--beige);font-weight:700;margin-bottom:8px}
+h2.serif{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:30px;line-height:1.05}
+.sub{font-size:11px;color:var(--muted);line-height:1.7;margin-top:10px;max-width:420px}
+/* about */
+.about{display:grid;grid-template-columns:380px 1fr;gap:22px}
+.feats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:18px}
+.feat{font-size:10px;color:var(--muted);line-height:1.5}
+.feat i{font-style:normal;font-size:18px;color:var(--gold);display:block;margin-bottom:6px}
+.feat b{display:block;color:var(--text);font-size:11px;margin-bottom:4px}
+.btn-dark{margin-top:16px;background:transparent;border:1px solid #333;border-radius:100px;color:#ddd;font-size:11px;padding:8px 8px 8px 14px;display:inline-flex;align-items:center;gap:10px}
+.btn-dark em{font-style:normal;background:#2a2a29;border-radius:50%;width:22px;height:22px;display:grid;place-items:center}
+.about-img{position:relative;border-radius:14px;overflow:hidden;min-height:320px;background:url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1400&auto=format&fit=crop') center/cover}
+.badge2000{position:absolute;left:16px;bottom:16px;background:rgba(30,30,30,.72);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:12px 18px}
+.badge2000 small{font-size:9px;color:var(--beige)} .badge2000 b{font-family:'Cormorant Garamond',serif;font-size:32px;display:block;line-height:1}
+/* services */
+.svc-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:18px}
+.svc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 12px;display:flex;flex-direction:column;min-height:210px}
+.svc i{color:var(--gold);font-style:normal;font-size:20px}
+.svc h4{font-size:11.5px;margin:10px 0 6px;line-height:1.3}
+.svc p{font-size:9.5px;color:var(--muted);line-height:1.6;flex:1}
+.svc a{margin-top:10px;width:22px;height:22px;border-radius:50%;border:1px solid #333;display:grid;place-items:center;color:#aaa;text-decoration:none;font-size:12px}
+/* projects */
+.proj-head{display:flex;justify-content:space-between;align-items:end}
+.proj-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px}
+.proj-grid div{height:180px;border-radius:12px;background-size:cover;background-position:center;border:1px solid var(--line)}
+/* featured */
+.featured{display:grid;grid-template-columns:280px 1fr;gap:20px;align-items:center}
+.meta{font-size:10px;color:var(--muted);margin-top:12px;line-height:2}
+.meta span{color:var(--gold);margin-right:6px}
+.feat-img{height:250px;border-radius:14px;background:url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1600&auto=format&fit=crop') center/cover;border:1px solid var(--line)}
+/* testimonial */
+.testi{display:grid;grid-template-columns:260px 1fr 180px;gap:18px;align-items:center;background:#121211;border:1px solid var(--line);border-radius:14px;padding:20px;margin:0 24px}
+.testi blockquote{font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;line-height:1.5;color:#d8d2c6}
+.stars{color:var(--gold);font-size:12px;margin-top:8px;letter-spacing:2px}
+.qmark{font-family:'Cormorant Garamond',serif;font-size:48px;color:#e8e2d5;line-height:1}
+.client{display:flex;align-items:center;gap:10px;font-size:10px}
+.client img{width:54px;height:54px;border-radius:50%;object-fit:cover}
+.arrow-c{width:28px;height:28px;border-radius:50%;border:1px solid #333;display:grid;place-items:center;color:#999}
+/* cta */
+.cta{display:grid;grid-template-columns:1fr 300px;gap:20px;align-items:center}
+.cta-contacts{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:18px;font-size:10px;color:var(--muted)}
+.cta-contacts b{display:block;color:var(--text);font-size:11px}
+.cta-img{position:relative;height:170px;border-radius:14px;background:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1000&auto=format&fit=crop') center/cover;overflow:hidden}
+.cta-img button{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:#f3efe7;border-radius:100px;padding:6px 6px 6px 16px;font-weight:700;font-size:12px;display:flex;gap:10px;align-items:center;border:0;white-space:nowrap}
+.cta-img button span{background:#111;color:#fff;width:30px;height:30px;border-radius:50%;display:grid;place-items:center}
+footer{display:flex;justify-content:space-between;align-items:center;padding:14px 24px;font-size:9px;color:var(--muted2);border-top:1px solid var(--line)}
+footer a{color:var(--muted2);text-decoration:none;margin-left:12px}
+.soc{display:flex;gap:8px}.soc a{width:24px;height:24px;border:1px solid #333;border-radius:50%;display:grid;place-items:center;margin:0;font-size:10px}
+@media(max-width:900px){
+.nav{display:none}.hero-bottom{grid-template-columns:1fr;}.stats{flex-direction:row}.stat{flex:1}
+.about,.featured,.cta,.testi{grid-template-columns:1fr}.svc-grid{grid-template-columns:repeat(3,1fr)}.proj-grid{grid-template-columns:repeat(2,1fr)}.testi{margin:0 14px}.section{padding:22px 16px}
+}
+@media(max-width:560px){.svc-grid{grid-template-columns:repeat(2,1fr)}.hero-title h1{font-size:72px}body{padding:8px}}
+.reveal{opacity:0;transform:translateY(18px);transition:.7s}.reveal.v{opacity:1;transform:none}
+.svc:hover,.proj-grid div:hover{transform:translateY(-3px);transition:.3s;border-color:var(--beige)}
+.btn-view:hover,.pill-white:hover{filter:brightness(1.1)}
+</style>
+</head>
+<body>
+<div class="frame">
+<!-- HERO -->
+<div class="hero">
+<div class="topbar">
+<div class="logo"><div class="logo-mark">A</div><div><b>AAKRITI</b><small>ARCHITECTS • INTERIORS</small></div></div>
+<nav class="nav"><a class="active" href="#">Home</a><a href="#about">About Us</a><a href="#services">Services</a><a href="#">Projects</a><a href="#">Process</a><a href="#">Testimonials</a><a href="#">Contact</a></nav>
+<div class="cta-top"><button class="pill-white">Consultation <i>↗</i></button><span class="icon-btn">◐</span><span class="icon-btn">◎</span><span class="icon-btn">☰</span></div>
+</div>
+<div class="hero-title"><h1>AAKRITI</h1><p>INTERIORS & ARCHITECTURE</p></div>
+<div class="hero-bottom">
+<div class="hero-left"><h2>Designing spaces.<br>Elevating lives.</h2><p>Architecture that inspires. Interiors that reflect you.</p><div class="since">SINCE 2000</div></div>
+<div><button class="btn-view">View Projects <span>→</span></button></div>
+<div class="stats"><div class="stat"><b>25+</b><small>Years of Design Experience</small></div><div class="stat"><b>250+</b><small>Projects Completed</small></div><div class="stat"><small style="font-size:11px;color:#fff">Ambala, Haryana</small><small>Proudly based in and serving India</small></div></div>
+</div>
+</div>
+
+<!-- ABOUT -->
+<div class="section about reveal" id="about">
+<div><div class="eyebrow">ABOUT AAKRITI</div><h2 class="serif">Inspired by purpose.<br>Driven by detail.</h2><p class="sub">Aakriti Architects is a premier architecture and interior design studio based in Ambala, creating timeless spaces since 2000. We blend thoughtful design, refined luxury, and functionality — tailored to the way you live, work, and dream.</p>
+<div class="feats"><div class="feat"><i>◍</i><b>Client First</b>Your vision is our foundation.</div><div class="feat"><i>۞</i><b>Timeless Design</b>Spaces that age beautifully and function effortlessly.</div><div class="feat"><i>⬣</i><b>End-to-End Expertise</b>From concept to completion, we handle it all.</div></div>
+<button class="btn-dark">More About Us <em>→</em></button>
+</div>
+<div class="about-img"><div class="badge2000"><small>Since</small><b>2000</b><small>Building trust. Designing the future.</small></div></div>
+</div>
+
+<!-- SERVICES -->
+<div class="section reveal" id="services"><div class="eyebrow">OUR SERVICES</div><h2 class="serif">Complete design<br>solutions for every space.</h2>
+<div class="svc-grid">
+<div class="svc"><i>♜</i><h4>Architectural Design</h4><p>Innovative architecture that blends form, function and context.</p><a href="#">→</a></div>
+<div class="svc"><i>🛋</i><h4>Interior Design</h4><p>Interiors that express your style and enhance daily living.</p><a href="#">→</a></div>
+<div class="svc"><i>⌂</i><h4>Residential Projects</h4><p>Custom homes crafted around your lifestyle and aspirations.</p><a href="#">→</a></div>
+<div class="svc"><i>▭</i><h4>Commercial Projects</h4><p>Functional, modern spaces that elevate business environments.</p><a href="#">→</a></div>
+<div class="svc"><i>🏭</i><h4>Industrial Projects</h4><p>Efficient, future-ready facilities designed for performance.</p><a href="#">→</a></div>
+<div class="svc"><i>✎</i><h4>Planning & Consultation</h4><p>Strategic insights and expert guidance for better decisions.</p><a href="#">→</a></div>
+</div></div>
+
+<!-- PROJECTS -->
+<div class="section reveal"><div class="proj-head"><div><div class="eyebrow">SELECTED PROJECTS</div><h2 class="serif">Spaces that speak<br>our design language.</h2></div><button class="btn-dark">Explore All Projects <em>→</em></button></div>
+<div class="proj-grid">
+<div style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop')"></div>
+<div style="background-image:url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=800&auto=format&fit=crop')"></div>
+<div style="background-image:url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=800&auto=format&fit=crop')"></div>
+<div style="background-image:url('https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?q=80&w=800&auto=format&fit=crop')"></div>
+</div></div>
+
+<!-- FEATURED -->
+<div class="section featured reveal"><div><div class="eyebrow">FEATURED PROJECT</div><h2 class="serif">Modern living.<br>Timeless elegance.</h2><p class="sub">This residence is the perfect balance of modern architecture and warm interiors, designed to offer comfort, openness and sophistication.</p><div class="meta"><div><span>◎</span> Location: Ambala, Haryana</div><div><span>◎</span> Project Type: Residential</div><div><span>◎</span> Area: 7,500 sq. ft.</div></div><button class="btn-dark">View Project <em>→</em></button></div><div class="feat-img"></div></div>
+
+<!-- TESTIMONIAL -->
+<div class="section" style="padding-left:0;padding-right:0;border-top:0"><div class="testi reveal"><div><div class="eyebrow">CLIENTS LOVE OUR WORK</div><h2 class="serif" style="font-size:22px">Trusted by homeowners and businesses alike.</h2><div style="display:flex;gap:8px;margin-top:12px"><span class="arrow-c">‹</span><span class="arrow-c">›</span></div></div><div style="display:flex;gap:14px"><div class="qmark">“</div><div><blockquote>Aakriti Architects transformed our vision into a stunning reality. Their attention to detail, creativity and professionalism made the entire journey seamless and enjoyable.</blockquote><div class="stars">★★★★★ <span style="color:#aaa;font-size:10px;letter-spacing:0">4.8 Rating on Google</span></div></div></div><div class="client"><div><b>Ritika & Arjun Mehta</b><br><span style="color:var(--muted)">Ambala</span></div><img src="https://images.unsplash.com/photo-1620629506613-3aed3edbc4d4?q=80&w=200&auto=format&fit=crop"><span class="arrow-c">›</span></div></div></div>
+
+<!-- CTA -->
+<div class="section cta reveal"><div><h2 class="serif">Let's create something<br>extraordinary together.</h2><p class="sub">Book a consultation with our design experts.</p><div class="cta-contacts"><div>☎ <b>+91 94160 55307</b>Call us</div><div>✉ <b>aakritiarch@yahoo.com</b>Email us</div><div>◍ <b>Manav Chowk, Ambala</b>Model Town, Haryana 134003 Visit us</div></div></div><div class="cta-img"><button>Book Consultation <span>→</span></button></div></div>
+
+<footer><div style="display:flex;align-items:center;gap:8px"><span style="font-family:'Cormorant Garamond';font-size:22px;color:var(--beige)">A</span><b style="letter-spacing:.2em;font-size:10px">AAKRITI</b><span>© 2024 Aakriti Architects. All Rights Reserved.</span></div><div><a href="#">Privacy Policy</a><a href="#">Terms & Conditions</a></div><div class="soc"><a href="#">◐</a><a href="#">f</a><a href="#">○</a></div></footer>
+</div>
+<script>const io=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('v')),{threshold:.1});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));</script>
+</body>
+</html>
