@@ -8,4 +8,4 @@ Reconstrução visual fiel de referência dark/luxo para escritório de arquitet
 - Responsivo (desktop-first, adaptação tablet/mobile)
 - Deploy: GitHub Pages
 
-Demo: https://ricklima991.github.io/aakriti-architects-landing/
+Demo: https://rickdigitalestudio.github.io/aakriti-architects-landing/
